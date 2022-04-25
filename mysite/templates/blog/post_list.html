@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+{% block content%}
+<div>
+    <a href="/"> DJANGO GIRLS BLOG</a>
+</div>
+
+{% for post in our_posts%}
+<div>
+    <p>published:{{post.published_date}}</p>
+    <p><a href=""> {{post.title}}</a></p>
+    <p> {{post.text|linebreaksbr}}</p>
+</div>
+{% endfor %}
+{% endblock content %}
